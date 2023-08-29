@@ -1,5 +1,16 @@
-server:
-  port: 3500
+database: x_account
+
 spring:
   application:
     name: account-service
+  config:
+    import:
+      - nacos:datasource
+      - nacos:registry
+      - nacos:account-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.3.9.47
+        namespace:
+        file-extension: yaml
