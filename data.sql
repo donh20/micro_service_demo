@@ -37,9 +37,9 @@ INSERT INTO x_product.products (id,name,price,stock) VALUES (3,'充电宝', 56,6
 DROP TABLE IF EXISTS x_account.accounts;
 CREATE TABLE x_account.accounts
 (
-    id               INT(11) NOT NULL AUTO_INCREMENT,
+    id              INT(11) NOT NULL AUTO_INCREMENT,
     name            VARCHAR(20),
-    balance          DOUBLE   DEFAULT NULL,
+    balance         DOUBLE   DEFAULT NULL,
     PRIMARY KEY (id)
 ) ENGINE = InnoDB AUTO_INCREMENT = 1  DEFAULT CHARSET = utf8;
 

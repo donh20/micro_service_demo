@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,7 +33,8 @@ class AccountMapperTest {
 
     @Test
     void processBalance() {
-        int i = accountMapper.processBalance(1, 100);
+        BigDecimal value = new BigDecimal(100);
+        int i = accountMapper.processBalance(1, value);
         System.out.println(i);
     }
 }

@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.haodong.dto.AccountDto;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Mapper
@@ -17,6 +18,6 @@ public interface AccountMapper {
     AccountDto findAccountById(@Param("id") Integer id);
 
     @Update("update accounts set balance = balance - #{value} where id = #{id}")
-    int processBalance(@Param("id") int id, @Param("value") int value);
+    int processBalance(@Param("id") int id, @Param("value") BigDecimal value);
 
 }
