@@ -1,0 +1,10 @@
+### 查询所有的商品
+GET http://localhost:3000/products
+Accept: application/json
+
+###查询一个商品
+GET http://localhost:3000/products/2
+Accept: application/json
+
+
+###

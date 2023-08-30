@@ -1,5 +1,15 @@
-server:
-  port: 3000
+database: x_product
 spring:
   application:
     name: product-service
+  config:
+    import:
+      - nacos:datasource
+      - nacos:product-service
+      - nacos:registry
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.3.9.47
+        namespace:
+        file-extension: yaml
